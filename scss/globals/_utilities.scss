@@ -1,0 +1,45 @@
+@use "_variables" as *;
+@use "_mixins" as *;
+
+.u-max-width {
+    //max-width: $desktop-width;
+    margin-inline: auto;
+    padding: 0 $space-base * 4;
+
+    @include tablet{
+        max-width: $tablet-small-width;
+        padding: 0;   
+    }
+    @include tablet-large{
+        max-width: $tablet-large-width;   
+    }
+}
+.u-hide {
+    display: none;
+}
+
+.u-no-scroll {
+    overflow: hidden;
+    
+    @include tablet {
+        overflow: auto; 
+    }
+}
+.u-no-scroll-open-menu {
+    overflow: hidden;
+    
+    @include tablet-large {
+        overflow: auto; 
+    }
+}
+.u-top-zindex{
+    z-index: 10;
+}
+
+//placeholders
+%box-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+%box-shadow-right {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+}

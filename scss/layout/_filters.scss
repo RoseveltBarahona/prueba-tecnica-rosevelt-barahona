@@ -1,0 +1,232 @@
+@use "../globals" as *;
+@use "../base" as *;
+
+.filters {
+    position: fixed;
+    overflow: auto;
+    padding-top: $space-base * 3;
+    height: 100%;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    background-color: $button-show-filter-background-default;
+    transition: left 0.5s ease;
+    z-index: 2;
+    @extend %box-shadow-right;
+    
+    &__wrap-title{
+        display: flex;
+        align-items: center;
+        border-bottom: solid 1px $filters-divisor;
+        padding: $space-base * 7 $space-base * 6;
+        justify-content: space-between;
+    }
+    &__title {
+        @extend %syne-font-family;
+        font-size: $font-size-base-medium;
+        color: $filters-section-title-default;
+        font-weight: 700;
+        margin: 0;    
+    }
+    &__close-options {
+        background-color: transparent;
+        border: none;
+    }
+    &__close-options-icon{
+        pointer-events: none;
+        cursor: pointer;
+    }
+    &__content {
+        padding: $space-base * 3 $space-base * 6 $space-base * 8;
+    }
+    
+    &--open {
+        left: 0;
+        z-index: 10;
+    }
+
+    @include tablet {
+        position: absolute;
+        width: 18.5rem;
+
+        &--open {
+            left: 0;
+            z-index: 4;
+        }
+    }
+    
+    @include desktop{
+        margin-top: 3.4rem;
+        padding-top: 0;
+        position: initial;
+        width: 16.5rem;
+        //min-width: 16rem;
+        height: auto;
+        box-shadow: none;
+        border-radius: 1.5rem;
+
+        &__close-options{
+            display: none;
+        }
+    }
+}
+
+.view-filters-btn{
+    display: flex;
+    align-items: center;
+    padding: $space-base * 2 $space-base * 4;
+    background-color: #FAF7F5;
+    border: solid 1px #622F6029;
+    border-radius: 10rem;
+    margin-bottom: $space-base * 6;
+    margin-inline: auto;
+    cursor: pointer;
+
+    &__icon {
+        margin-right: $space-base * 2;
+        pointer-events: none;        
+    }
+
+    @include tablet-large {
+        margin-inline: initial;
+    }
+
+    @include desktop {
+        display: none;
+    }
+    
+}
+
+
+.filter {
+    $this: &;
+
+    &__header {
+        display: grid;
+        font-weight: 600;
+        grid-template-columns: auto auto 1fr;
+        padding: $space-base * 3 0;
+        color: $filters-filter-name-text-default;
+        margin-bottom: $space-base * 2;
+        cursor: pointer;
+    }
+
+    &__icon {
+        margin-right: $space-base * 2;
+    }
+
+    &__arrow {
+        justify-self: end;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0 $space-base * 4;
+        font-size: $font-size-base-xs;
+    }
+
+    &__item {
+        list-style-type: none;
+        padding: .75rem 0;
+    }
+
+    &__label {
+        margin-left: $space-base;
+    }
+
+    &__link-view-more,
+    &__link-view-less {
+        color: $filters-link-default;
+        margin-bottom: $space-base ;
+        display: block;
+        cursor: pointer;
+        text-decoration: underline;
+        padding: $space-base * 4;
+    }
+
+    &__link-view-less {
+        background-color: transparent;
+        border: none;
+    }
+
+    &__input-price {
+        width: 100%;
+        height: 3rem;
+        border: solid 1px $form-text-input-border-default;
+        border-radius: 10rem;
+        padding: $space-base * 4 $space-base * 4 $space-base * 4 $space-base * 12;
+
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAIpSURBVHgB7Zg7TsNAEIbH0FCm5RJJSjrgBIgT4MABEk5AcoLkBChHgJIq0FFanCBlypyAZf4EJGSJsM7OjG1lPmn9KNbx/2W9LyLHcRzHcRzHcRzHOTgySuC2m0/5CSMSIBAVIaPBvJgXZMgRpSAUfvso6h8FWuT9vE+GpLWAXh5w5sNrFuiNUshoyMcOl/VnRpdWLUFEABuYPH7Mx5QA/nm0ADKWkPYJCIKwCM2Xay4dq8+hMQJAHRIaJQBYS1AVwMPkw6CXL+66+bBKPUsJagI4/Ii72DH3shc8vs/4flylvpUENQEc+qp0f04VsZCgJqA8L2ABz7QH2hLUBGzmBRndY5LE5wkHmdGeaEpozEQoBo3JUuOGwV1otIRWCQDSElonAEhKaKUAICWhtQKAhIRWCwCpEpIEbMZ4wJsZ1js5v0mRkCaAJzpE+guWGMoSeCY6jamXJKCuTYxd7xPCdsqNPcaYOsl9QJMkYPmdZXTzffsUU0ekE2yCBITH8hvX3Dct+X0mMfWS1gJl6trYLIcP299dxtQVFQCsJaSEB+ICgJWE1PBARQDQliARHqgJAFoSpMIDVQFAWoJkeKAuAEhJkA4PTASAVAka4YGZALCvBK3wwFQAqCpBMzwwFwBiJWiHB7UIAP9JsAgPahMA/pJgFR7UKgCUJWA9/7Ok1Q4PahcAShI2WIQHx9QAilWx6p32X/jyjMsJl3cOf60d3nEcx3Ec56D5AqJ65xuDLcrXAAAAAElFTkSuQmCC);
+        background-repeat: no-repeat;
+        background-position: .5rem center;
+        background-size: 2rem 2rem;
+
+        &:first-of-type {
+            margin-bottom: $space-base * 4;
+        }
+    }
+
+    &__group[open] &__header {
+        color: $filters-filter-name-text-open;
+    }
+
+    &__group[open] &__icon path {
+        stroke: $filters-icon-open
+    }
+
+    &__group[open] &__arrow {
+        transform: rotate(90deg);
+    }
+
+    &__group[open] &__arrow path {
+        fill: $filters-icon-open
+    }
+}
+
+.filter__view-more[open]{
+    .filter__link-view-more {
+        display: none;
+    }
+}
+
+.filter__tooltip {
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+
+    &:hover &-content,
+    &:focus-visible &-content {
+        display: block;
+    }
+
+    &:hover &-content::before,
+    &:focus-visible &-content::before {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: white transparent transparent transparent;
+    }
+    &-content {
+        position: absolute;
+        @extend %box-shadow;
+        display: none;
+        background-color: $overlay-background-default;
+        width: 10rem;
+        text-align: center;
+        border-radius: $space-base;
+        padding: 0.375rem 0.625rem;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -5rem;
+    }
+}
+
+// llegar al abuelo
+// &:hover #{$this}__tooltip-content,
+//&:focus-visible #{$this}__tooltip-content {
+//    display: block;
+//} 

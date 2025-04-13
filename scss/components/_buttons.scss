@@ -1,0 +1,43 @@
+@use "../globals" as *;
+
+.btn {
+    cursor: pointer;
+    padding: $space-base * 3 $space-base * 10;
+    border-radius: 10rem;
+    font-size: $font-size-base-small;
+    font-weight: 600;
+    border: none;
+    line-height: 1.5;
+
+    &[disabled] {
+        cursor: not-allowed;
+        opacity: 0.9;
+        filter: grayscale(90%)
+    }
+}
+
+.btn--primary {
+    background-color: $button-primary-background-default;
+    color: $button-primary-text-default;
+
+    &:hover {
+        background-color: $button-primary-background-hover;
+    }
+}
+.btn--secondary {
+    background-color: $button-secondary-background-default;
+    color: $button-secondary-text-default;
+    border: solid 1px $button-secondary-border-default;
+    padding: $space-base * 2 $space-base * 5;
+}
+
+.btn--accent {
+    background-color: $button-accent-background-default;
+    color: $button-accent-text-default;
+
+    &:hover {
+        background-color: $button-accent-background-hover;
+    }
+}
+
+
