@@ -1,9 +1,10 @@
 @use "base";
 @use "components/buttons";
+@use "components/checkbox";
 @use "../scss/layout/nav";
 @use "../scss/layout/footer";
-@use "../scss/layout/filters";
 @use "../scss/layout/results";
+@use "../scss/layout/filters";
 @use "../scss/pages/home"; 
 @use "vendors/slick-overrides";
 

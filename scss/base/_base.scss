@@ -20,24 +20,3 @@ a {
 summary::-webkit-details-marker {
     display: none;
 }
-
-input[type="checkbox"]{
-    appearance: none;
-    position: relative;
-    top: calc($space-base / 2);
-    background-clip: padding-box;
-    background-color: white;
-    border: 1px solid $form-checkbox-box-border-default;
-    border-radius: calc($space-base / 2);
-    width: 1.125rem;
-    height: 1.125rem;
-    cursor: pointer;
-}
-
-input[type="checkbox"]:checked {
-   background-image: url("../img/checkbox-active.png");
-   background-color: $form-checkbox-box-background-selected;
-   background-position: center center; 
-   background-size: 100%  100%; 
-   //filter: hue-rotate(338deg) brightness(86%) saturate(90%) invert(1);   
-}

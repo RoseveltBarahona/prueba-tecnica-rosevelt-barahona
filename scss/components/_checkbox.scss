@@ -1,0 +1,23 @@
+@use "../globals" as *;
+
+
+input[type="checkbox"]{
+    appearance: none;
+    position: relative;
+    top: calc($space-base / 2);
+    background-clip: padding-box;
+    background-color: white;
+    border: 1px solid $form-checkbox-box-border-default;
+    border-radius: calc($space-base / 2);
+    width: 1.125rem;
+    height: 1.125rem;
+    cursor: pointer; 
+}
+
+input[type="checkbox"]:checked {
+   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADEAAAAwCAQAAAASyVoyAAAAlklEQVR42u3WwQ3CMBBEUUpwCS4hJaQUOiAdQAfQCSWlBJfwOSA0Qhx8MBMl0vy79STvHvaUUko7icJMdQIX3i0u4MqnRnEBanIDqxtoTAEOBHDmyYPqAvR0pZq+iAZC/g6IEGIYMgt8I4Yt4vaL9IFxpA+MI31gHLl3gHHEAAgxAUKMgBAjIMQICBFgi8pMyTGaUtq0F5tKDl9jQpNnAAAAAElFTkSuQmCC);
+   background-color: $form-checkbox-box-background-selected;
+   background-position: center center; 
+   background-size: 100%  100%; 
+   //filter: hue-rotate(338deg) brightness(86%) saturate(90%) invert(1);   
+}  

@@ -93,7 +93,7 @@ function filterAndRemove(value) {
 
 function showAllCards() {
     cards.forEach((card) => {
-        card.classList.remove("hideItem");
+        card.classList.remove("filters-hide-item");
     })
 }
 
@@ -115,11 +115,11 @@ function updateCards() {
     })
 
     cardsToHide.forEach((card) => {
-        card.classList.add("hideItem")
+        card.classList.add("filters-hide-item")
     })
 
     totalSelected.forEach((card) => {
-        card.classList.remove("hideItem")
+        card.classList.remove("filters-hide-item")
     })
 }
 
@@ -131,7 +131,7 @@ $(document).ready(function () {
     $('#main-slider').slick({
         dots: true,
         infinite: true,
-        speed: 800,
+        speed: 1000,
         fade: true,
         slidesToShow: 1,
         slidesToScroll: 1,

@@ -13,33 +13,37 @@
     transition: left 0.5s ease;
     z-index: 2;
     @extend %box-shadow-right;
-    
-    &__wrap-title{
+
+    &__wrap-title {
         display: flex;
         align-items: center;
         border-bottom: solid 1px $filters-divisor;
         padding: $space-base * 7 $space-base * 6;
         justify-content: space-between;
     }
+
     &__title {
         @extend %syne-font-family;
         font-size: $font-size-base-medium;
         color: $filters-section-title-default;
         font-weight: 700;
-        margin: 0;    
+        margin: 0;
     }
+
     &__close-options {
         background-color: transparent;
         border: none;
     }
-    &__close-options-icon{
+
+    &__close-options-icon {
         pointer-events: none;
         cursor: pointer;
     }
+
     &__content {
         padding: $space-base * 3 $space-base * 6 $space-base * 8;
     }
-    
+
     &--open {
         left: 0;
         z-index: 10;
@@ -54,8 +58,8 @@
             z-index: 4;
         }
     }
-    
-    @include desktop{
+
+    @include desktop {
         margin-top: 3.4rem;
         padding-top: 0;
         position: initial;
@@ -65,13 +69,12 @@
         box-shadow: none;
         border-radius: 1.5rem;
 
-        &__close-options{
+        &__close-options {
             display: none;
         }
     }
 }
-
-.view-filters-btn{
+.view-filters-btn {
     display: flex;
     align-items: center;
     padding: $space-base * 2 $space-base * 4;
@@ -84,7 +87,7 @@
 
     &__icon {
         margin-right: $space-base * 2;
-        pointer-events: none;        
+        pointer-events: none;
     }
 
     @include tablet-large {
@@ -94,7 +97,7 @@
     @include desktop {
         display: none;
     }
-    
+
 }
 
 
@@ -183,7 +186,7 @@
     }
 }
 
-.filter__view-more[open]{
+.filter__view-more[open] {
     .filter__link-view-more {
         display: none;
     }
@@ -210,6 +213,7 @@
         border-style: solid;
         border-color: white transparent transparent transparent;
     }
+
     &-content {
         position: absolute;
         @extend %box-shadow;
@@ -223,6 +227,10 @@
         left: 50%;
         margin-left: -5rem;
     }
+}
+
+.filters-hide-item {
+    display: none;
 }
 
 // llegar al abuelo
