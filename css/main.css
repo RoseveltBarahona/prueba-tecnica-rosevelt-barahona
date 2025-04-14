@@ -1023,11 +1023,12 @@ input[type=checkbox]:checked {
   display: block;
   font-size: 1.5rem;
   line-height: 1.4;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 @media screen and (min-width: 1024px) {
   .slider-info__subtitle {
     font-size: 1.875rem;
+    margin-bottom: 3rem;
   }
 }
 @media screen and (min-width: 1440px) {

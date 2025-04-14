@@ -121,10 +121,11 @@
         display: block;
         font-size: 1.5rem;
         line-height: 1.4;
-        margin-bottom: $space-base * 12; 
+        margin-bottom: $space-base * 4; 
 
         @include tablet-large {
-            font-size: 1.875rem; 
+            font-size: 1.875rem;
+            margin-bottom: $space-base * 12;  
         }
         @include desktop {
             font-size: 1.25rem;
