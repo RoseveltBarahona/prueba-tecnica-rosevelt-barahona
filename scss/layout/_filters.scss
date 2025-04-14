@@ -33,11 +33,12 @@
     &__close-options {
         background-color: transparent;
         border: none;
+        cursor: pointer;
+ 
     }
 
     &__close-options-icon {
         pointer-events: none;
-        cursor: pointer;
     }
 
     &__content {

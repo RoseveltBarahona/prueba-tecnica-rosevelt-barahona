@@ -674,10 +674,10 @@ input[type=checkbox]:checked {
 .filters__close-options {
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 .filters__close-options-icon {
   pointer-events: none;
-  cursor: pointer;
 }
 .filters__content {
   padding: 0.75rem 1.5rem 2rem;
