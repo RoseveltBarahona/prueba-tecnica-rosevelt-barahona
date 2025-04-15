@@ -8,6 +8,8 @@
     font-weight: 600;
     border: none;
     line-height: 1.5;
+    transition: background-color .2s ease-in;
+
 
     &[disabled] {
         cursor: not-allowed;
