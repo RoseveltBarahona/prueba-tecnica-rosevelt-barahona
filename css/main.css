@@ -177,6 +177,7 @@ summary::-webkit-details-marker {
   font-weight: 600;
   border: none;
   line-height: 1.5;
+  transition: background-color 0.2s ease-in;
 }
 .btn[disabled] {
   cursor: not-allowed;
