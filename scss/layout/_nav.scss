@@ -48,10 +48,6 @@
         display: none;
     }
 
-    &--open {
-        z-index: 20;
-    }
-
     &--open & {
         &-icon-open {
             display: none;
@@ -117,7 +113,6 @@
     }
 
     &--open {
-        z-index: 10;
         left: 0;
         box-shadow: 0 0 0 100vw rgba(24, 26, 23, 0.5);
     }

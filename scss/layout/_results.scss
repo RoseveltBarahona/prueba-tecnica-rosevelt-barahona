@@ -225,10 +225,6 @@
         line-height: 1.1;
     }
     
-    &[open]{
-        z-index: 10;
-        color:red
-    }
 
     @include tablet {
         &__content {
@@ -247,13 +243,7 @@
         &__footer {
             background-color: $overlay-top-bar-default;
         }
-        &[open]{
-            z-index: 2;
-            color:red
-        }
-    }
-    /* &[open] &__view-price-icon {
-    } */  
+    }  
 }
 
 
@@ -264,23 +254,21 @@
 
 .price-details::details-content {
     opacity: 0;
-    z-index: 1;
     transition:
         opacity 300ms,
         content-visibility 300ms allow-discrete;
 }
 .price-details[open]::details-content {
-    z-index: 1;
     opacity: 1; 
 }
 
 
 
 //tercer item de tipo card
-/* .cards li:nth-of-type(3n) .price-details__content {
-    right: 0;
-} */
+//.cards li:nth-of-type(3n) .price-details__content {
+//    right: 0;
+//} 
 //solo tres últimos
-/* .cards li:nth-last-child(-n+3) {
-    bottom: 0;
-}  */
+// .cards li:nth-last-child(-n+3) {
+//    bottom: 0;
+//}  
