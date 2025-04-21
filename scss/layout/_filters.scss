@@ -47,17 +47,11 @@
 
     &--open {
         left: 0;
-        z-index: 10;
     }
 
     @include tablet {
         position: absolute;
         width: 18.5rem;
-
-        &--open {
-            left: 0;
-            z-index: 4;
-        }
     }
 
     @include desktop {
