@@ -47,6 +47,7 @@
 
     &--open {
         left: 0;
+        z-index: 5;
     }
 
     @include tablet {
