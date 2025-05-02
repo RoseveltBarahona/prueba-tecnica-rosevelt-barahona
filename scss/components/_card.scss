@@ -1,5 +1,4 @@
 @use "../globals" as *;
-@use "../base" as *;
 
 .card { 
     position: relative;
@@ -38,6 +37,7 @@
     &__country {
         display: inline-block;
         @extend %syne-font-family;
+        font-size: 0.875rem;
         color: $card-title-default;
         margin-bottom: $space-base * 2;
     }
@@ -63,7 +63,7 @@
         gap: $space-base * 6;
         align-items: center;
         margin-top: auto;
-        background-color: $card-bottom-bar-background-default;
+        background-color: $card-circuit-card-bottom-bar-background-default;
         border-radius: 0 0 $space-base * 6 $space-base * 6;
         padding: $space-base * 3 $space-base * 4 $space-base * 4;
     }
