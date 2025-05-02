@@ -36,7 +36,7 @@
     border: none;
     position: absolute;
     cursor: pointer;
-    z-index: 10;
+    //z-index: 3;
     right: $space-base * 3;
 
     &-icon-open,
@@ -46,6 +46,9 @@
 
     &-icon-close {
         display: none;
+    }
+    &--open {
+        z-index: 10;
     }
     &--open & {
         &-icon-open {
@@ -75,7 +78,7 @@
     width: 80vw;
     top: 0;
     left: -80vw;
-    z-index: 10;
+    z-index: 3;
     background-color: $navbar-background-default;
     display: flex;
     flex-direction: column;
@@ -143,6 +146,7 @@
     }
 
     &--open {
+        z-index: 10;
         left: 0;
         box-shadow: 0 0 0 100vw rgba(24, 26, 23, 0.5);
     }

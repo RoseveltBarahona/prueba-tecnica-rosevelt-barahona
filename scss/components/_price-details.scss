@@ -126,6 +126,9 @@
 }
 
 //open price details//animate content
+.price-details[open] {
+    z-index: 2;
+}
 .price-details summary {
     cursor: pointer;
 }
