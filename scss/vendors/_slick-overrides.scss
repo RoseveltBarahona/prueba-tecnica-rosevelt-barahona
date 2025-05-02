@@ -1,7 +1,4 @@
 @use "../globals" as *;
-@use "../base" as *;
-
-
 
 /***  sobrescribir estilos de slick  ***/
 .slick-slider.slick-dotted {
@@ -136,7 +133,7 @@
     }
 }
 
-// esconder los slides que no sean el primero para evitar desbordamientos
+// esconder los slides que no sean el primero para evitar desbordamientos 
 .slider:not(.slick-initialized) .slider-info:not(:first-child) {
     display: none
 }

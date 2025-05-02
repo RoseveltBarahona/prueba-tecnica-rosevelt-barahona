@@ -1,5 +1,4 @@
 @use "../globals" as *;
-@use "../base" as *;
 
 .filters {
     position: fixed;
@@ -207,7 +206,7 @@
         margin-left: -5px;
         border-width: 5px;
         border-style: solid;
-        border-color: white transparent transparent transparent;
+        border-color: $overlay-background-default transparent transparent transparent;
     }
 
     &-content {

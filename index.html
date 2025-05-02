@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre nuevos lugares y nuevas experiencias en tu próximo viaje. ¡Planifique su próximo viaje con la ayuda de nuestros expertos!">
+    <meta name="description"
+        content="Descubre nuevos lugares y nuevas experiencias en tu próximo viaje. ¡Planifique su próximo viaje con la ayuda de nuestros expertos!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Syne:wght@400..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200..1000&family=Syne:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/accessible-slick-theme.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script defer src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/@accessible360/accessible-slick@1.0.1/slick/slick.min.js"></script>
@@ -18,20 +23,19 @@
 
 <body>
     <header class="header">
-        <a href="#" ><img class="header__logo" src="img/logo.svg" alt="logo de waveless"></a>
+        <a href="#"><img class="header__logo" src="img/logo.svg" alt="logo de waveless"></a>
+        <nav>
+            <ul class="navbar" id="menu">
+                <li class="navbar__item"><a class="navbar__link navbar__link--active" href=""><img class="navbar__link-icon" src="img/icons/icon-adventure.svg" alt="">Aventuras</a></li>
+                <li class="navbar__item"><a class="navbar__link" href=""><img class="navbar__link-icon" src="img/icons/icon-destinations.svg" alt="">Destinos</a></li>
+                <li class="navbar__item"><a class="navbar__link" href=""><img class="navbar__link-icon" src="img/icons/icon-accommodation.svg" alt="">Alojamiento</a></li>
+                <li class="navbar__item"><a class="navbar__link" href="">Sobre nosotros</a></li>
+            </ul>
+        </nav>
         <button class="header__hamburger-menu" id="menu-hamburger-button" aria-label="Abrir menú mobile">
             <img class="header__hamburger-menu-icon-open" src="img/icons/icon-burgerMenu.svg" alt="">
             <img class="header__hamburger-menu-icon-close" src="img/icons/close-details.svg" alt="">
         </button>
-        <nav class="navbar" id="menu">
-            <a class="navbar__link navbar__link--active " href=""><img class="navbar__link-icon"
-                    src="img/icons/icon-adventure.svg" alt="">Aventuras</a>
-            <a class="navbar__link" href=""><img class="navbar__link-icon" src="img/icons/icon-destinations.svg"
-                    alt="">Destinos</a>
-            <a class="navbar__link" href=""><img class="navbar__link-icon" src="img/icons/icon-accommodation.svg"
-                    alt="">Alojamiento</a>
-            <a class="navbar__link" href="">Sobre nosotros</a>
-        </nav>
         <button class="btn btn--primary navbar__booking-btn">Reservar</button>
     </header>
 
@@ -48,8 +52,9 @@
                     <source srcset="img/imagen-ruta-por-australia-mobile.jpg" media="(max-width: 740px)" />
                     <source srcset="img/imagen-ruta-por-australia.webp" media="(min-width: 740px)" />
                     <source srcset="img/imagen-ruta-por-australia.jpg" media="(min-width: 740px)" />
-                    <img class="slider-info__image" src="img/imagen-ruta-por-australia.jpg" alt="imagen de un mapa con las rutas por australia" />
-                </picture>  
+                    <img class="slider-info__image" src="img/imagen-ruta-por-australia.jpg"
+                        alt="imagen de un mapa con las rutas por australia" />
+                </picture>
             </div>
             <div class="slider-info">
                 <div class="slider-info__content">
@@ -62,8 +67,9 @@
                     <source srcset="img/imagen-ruta-por-dinamarca-mobile.jpg" media="(max-width: 740px)" />
                     <source srcset="img/imagen-ruta-por-dinamarca.webp" media="(min-width: 740px)" />
                     <source srcset="img/imagen-ruta-por-dinamarca.jpg" media="(min-width: 740px)" />
-                    <img loading="lazy" class="slider-info__image" src="img/imagen-ruta-por-dinamarca.jpg" alt="imagen de un mapa con las rutas por australia" />
-                </picture>  
+                    <img loading="lazy" class="slider-info__image" src="img/imagen-ruta-por-dinamarca.jpg"
+                        alt="imagen de un mapa con las rutas por australia" />
+                </picture>
             </div>
         </div>
     </section>
@@ -352,7 +358,8 @@
                         <picture>
                             <source srcset="img/image-1-2x.webp" />
                             <source srcset="img/image-1-2xjpg" />
-                            <img loading="lazy" class="card__image" src="img/image-1-2x.jpg" alt="Imagen de un palacio en Bangkok" />
+                            <img loading="lazy" class="card__image" src="img/image-1-2x.jpg"
+                                alt="Imagen de un palacio en Bangkok" />
                         </picture>
                         <section class="card__content">
                             <strong class="card__country">Marruecos, Africa<span class="card__days">9
@@ -403,7 +410,8 @@
                         <picture>
                             <source srcset="img/image-2-2x.webp" />
                             <source srcset="img/image-2-2xjpg" />
-                            <img loading="lazy" class="card__image" src="img/image-2-2xjpg" alt="Imagen de un camello en el desierto" />
+                            <img loading="lazy" class="card__image" src="img/image-2-2xjpg"
+                                alt="Imagen de un camello en el desierto" />
                         </picture>
                         <section class="card__content">
                             <strong class="card__country">Marruecos, Africa<span class="card__days">9
@@ -453,7 +461,8 @@
                         <picture>
                             <source srcset="img/image-3-2x.webp" />
                             <source srcset="img/image-3-2xjpg" />
-                            <img loading="lazy" class="card__image" src="img/image-3-2xjpg" alt="Imagen de vista aerea de un paisaje en marruecos" />
+                            <img loading="lazy" class="card__image" src="img/image-3-2xjpg"
+                                alt="Imagen de vista aerea de un paisaje en marruecos" />
                         </picture>
                         <section class="card__content">
                             <strong class="card__country">Marruecos, Africa<span class="card__days">9
@@ -507,7 +516,8 @@
                         <picture>
                             <source srcset="img/image-1-2x.webp" />
                             <source srcset="img/image-1-2xjpg" />
-                            <img loading="lazy" class="card__image" src="img/image-1-2x.jpg" alt="Imagen de un palacio en Bangkok" />
+                            <img loading="lazy" class="card__image" src="img/image-1-2x.jpg"
+                                alt="Imagen de un palacio en Bangkok" />
                         </picture>
                         <section class="card__content">
                             <strong class="card__country">Marruecos, Africa<span class="card__days">9
@@ -558,7 +568,8 @@
                         <picture>
                             <source srcset="img/image-2-2x.webp" />
                             <source srcset="img/image-2-2xjpg" />
-                            <img loading="lazy" class="card__image" src="img/image-2-2xjpg" alt="Imagen de un camello en el desierto" />
+                            <img loading="lazy" class="card__image" src="img/image-2-2xjpg"
+                                alt="Imagen de un camello en el desierto" />
                         </picture>
                         <section class="card__content">
                             <strong class="card__country">Marruecos, Africa<span class="card__days">9
@@ -609,7 +620,8 @@
                         <picture>
                             <source srcset="img/image-3-2x.webp" />
                             <source srcset="img/image-3-2xjpg" />
-                            <img loading="lazy" class="card__image" src="img/image-3-2xjpg" alt="Imagen de vista aerea de un paisaje en marruecos" />
+                            <img loading="lazy" class="card__image" src="img/image-3-2xjpg"
+                                alt="Imagen de vista aerea de un paisaje en marruecos" />
                         </picture>
                         <section class="card__content">
                             <strong class="card__country">Marruecos, Africa<span class="card__days">9
@@ -660,7 +672,8 @@
                         <picture>
                             <source srcset="img/image-1-2x.webp" />
                             <source srcset="img/image-1-2xjpg" />
-                            <img loading="lazy" class="card__image" src="img/image-1-2x.jpg" alt="Imagen de un palacio en Bangkok" />
+                            <img loading="lazy" class="card__image" src="img/image-1-2x.jpg"
+                                alt="Imagen de un palacio en Bangkok" />
                         </picture>
                         <section class="card__content">
                             <strong class="card__country">Marruecos, Africa<span class="card__days">9
@@ -711,7 +724,8 @@
                         <picture>
                             <source srcset="img/image-2-2x.webp" />
                             <source srcset="img/image-2-2xjpg" />
-                            <img loading="lazy" class="card__image" src="img/image-2-2xjpg" alt="Imagen de un camello en el desierto" />
+                            <img loading="lazy" class="card__image" src="img/image-2-2xjpg"
+                                alt="Imagen de un camello en el desierto" />
                         </picture>
                         <section class="card__content">
                             <strong class="card__country">Marruecos, Africa<span class="card__days">9
@@ -762,7 +776,8 @@
                         <picture>
                             <source srcset="img/image-3-2x.webp" />
                             <source srcset="img/image-3-2xjpg" />
-                            <img loading="lazy" class="card__image" src="img/image-3-2xjpg" alt="Imagen de vista aerea de un paisaje en marruecos" />
+                            <img loading="lazy" class="card__image" src="img/image-3-2xjpg"
+                                alt="Imagen de vista aerea de un paisaje en marruecos" />
                         </picture>
                         <section class="card__content">
                             <strong class="card__country">Marruecos, Africa<span class="card__days">9
@@ -821,4 +836,5 @@
         </p>
     </footer>
 </body>
+
 </html>

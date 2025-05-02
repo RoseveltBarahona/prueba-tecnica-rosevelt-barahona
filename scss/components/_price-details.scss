@@ -1,6 +1,4 @@
 @use "../globals" as *;
-@use "../base" as *;
-
 
 .price-details {
     position: relative;
@@ -78,7 +76,6 @@
         gap: $space-base * 3;
         line-height: 1.25;
         grid-template-columns: auto auto;
-        background-color: white;
         padding: 0 $space-base * 6 $space-base * 6;
     }
 
@@ -112,7 +109,7 @@
         &__content {
             position: absolute;
             border-radius: $space-base * 6;
-            border: solid 1px $overlay-border-default;
+            border: solid 1px $color-border-medium-default;
             width: auto;
             height: auto;
             min-width: 25rem;
