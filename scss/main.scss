@@ -3,11 +3,11 @@
 @use "components/checkbox";
 @use "components/card";
 @use "components/price-details";
-@use "../scss/layout/nav";
-@use "../scss/layout/footer";
-@use "../scss/layout/results";
-@use "../scss/layout/filters";
-@use "../scss/pages/home"; 
+@use "layout/nav";
+@use "layout/footer";
+@use "layout/results";
+@use "layout/filters";
+@use "pages/home"; 
 @use "vendors/slick-overrides";  
 
 

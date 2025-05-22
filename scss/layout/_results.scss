@@ -1,4 +1,5 @@
-@use "../globals" as *;
+@use "../abstracts" as *;
+
 
 .results {
     @include desktop {

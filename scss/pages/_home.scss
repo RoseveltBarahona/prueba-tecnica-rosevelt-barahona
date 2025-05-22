@@ -1,4 +1,5 @@
-@use "../globals" as *;
+@use "../abstracts" as *;
+
 
 .main{
     max-width: $desktop-width;
